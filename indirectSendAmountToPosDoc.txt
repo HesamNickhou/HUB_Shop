@@ -1,0 +1,54 @@
+send byte to pos 
+[70] [posType] [length] [1] [2] [3] [4] [Crc] , hex byte 
+
+if pasargad  --> posType = 3
+if samankish --> posType = 4
+ 
+for testing pasargad pos  --> posType = 1
+for testing samankish pos --> posType = 2
+
+length = 8
+
+1 -> (amount >> 24) & 0xff
+2 -> (amount >> 16) & 0xff
+3 -> (amount >> 8) & 0xff 
+4 -> (amount & 0xff)
+
+crc = 1 xor 2 xor 3 xor 4
+
+if posType = 1 or posType = 2 -- > the other bytes don't care 
+
+
+example 
+70 04 08 3b 9a c9 ff 97 --> sman kish pos, amount = 999.999.999 
+70 03 08 00 00 67 84 E3 --> pasargad pos , amount = 26.500
+70 01 --> pasargad test pos  
+70 02 --> saman kish test pos
+
+response from pos 
+{"P":{"responseCode":responseCode}} 
+for saman kish refer to saman kish doc table 5 page 9 
+for pasargad refer to pasargad doc table 5,4 page 19 
+
+{"P":{"responseCode":-1}} --> 
+invalid response from pos   
+
+{"P":{"responseCode":0}} --> successful
+
+//--------------------------------------------------------
+ba in vojod hanooz mishe mese ghabl baraye pos mablagh ro frstad va ba noskhe haye ghabli saz gar hastesh 
+
+diactiveCard 78
+amzBishazHad 75
+rnotresponseFromServer 68
+saghfTrakonesh 61
+invalidPass 55
+mojodiKafiNis 51
+repeatTransaction 19
+adameErtebatBaMarkaz 5
+canselByCustomer 3
+invalidData 2
+timeOut 1
+successful 0
+
+ 

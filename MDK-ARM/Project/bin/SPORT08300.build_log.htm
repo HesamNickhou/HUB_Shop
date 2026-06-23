@@ -1,0 +1,1001 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sadegh k, gg, LIC=EPPBS-LM41M-FZ6WU-SSZXM-XIRFM-EJ59M
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+D:\KalaanrarZaadeh\HUB\code\MDK-ARM\Project.uvprojx
+Project File Date:  08/11/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Note: Rebuilding project, since 'Options->Output->Create Batch File' is selected.
+Rebuild target 'AndroidF1'
+assembling startup_stm32f103xb.s...
+compiling main.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\ecard.h(50): warning:  #47-D: incompatible redefinition of macro "UnSuccess"  (declared at line 49)
+  #define UnSuccess 112     // parameter namotabar ast 
+..\Lib\Config.h(366): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c(207): warning:  #223-D: function "CDC_Transmit_FS" declared implicitly
+    CDC_Transmit_FS((uint8_t *)&ch,1);
+../Core/Src/main.c(214): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        unsigned char len = strlen(buf);
+../Core/Src/main.c(215): warning:  #223-D: function "CDC_Transmit_FS" declared implicitly
+        CDC_Transmit_FS((unsigned char*)buf,len);
+../Core/Src/main.c(216): warning:  #188-D: enumerated type mixed with another type
+        led(0) 
+../Core/Src/main.c(218): warning:  #188-D: enumerated type mixed with another type
+        led(1)
+../Core/Src/main.c(225): warning:  #223-D: function "SPI_Flash_Write2" declared implicitly
+        return(SPI_Flash_Write2(pDest, memoryOffset, sizeToCopy));
+../Core/Src/main.c(231): warning:  #940-D: missing return statement at end of non-void function "LoadFromDFToRam" 
+  }
+../Core/Src/main.c(236): warning:  #223-D: function "IntToBytes" declared implicitly
+        IntToBytes(trHead, &buf[0]);
+../Core/Src/main.c(258): warning:  #223-D: function "BytesToInt" declared implicitly
+        BytesToInt(&trHead, &buf[0]);
+../Core/Src/main.c(349): warning:  #940-D: missing return statement at end of non-void function "LoadRecordsInfo" 
+  }
+../Core/Src/main.c(254): warning:  #177-D: variable "OfflineStart"  was declared but never referenced
+        unsigned int OfflineStart, Address, Idx, Idx2;
+../Core/Src/main.c(254): warning:  #177-D: variable "Address"  was declared but never referenced
+        unsigned int OfflineStart, Address, Idx, Idx2;
+../Core/Src/main.c(254): warning:  #177-D: variable "Idx"  was declared but never referenced
+        unsigned int OfflineStart, Address, Idx, Idx2;
+../Core/Src/main.c(254): warning:  #177-D: variable "Idx2"  was declared but never referenced
+        unsigned int OfflineStart, Address, Idx, Idx2;
+../Core/Src/main.c(255): warning:  #177-D: variable "Found"  was declared but never referenced
+        unsigned char Found=0, buf[12];
+../Core/Src/main.c(381): warning:  #940-D: missing return statement at end of non-void function "SaveTransactionRecord" 
+  }
+../Core/Src/main.c(370): warning:  #177-D: variable "i"  was declared but never referenced
+        unsigned short i;
+../Core/Src/main.c(518): warning:  #68-D: integer conversion resulted in a change of sign
+                                cntr = 0 - 1 ;
+../Core/Src/main.c(387): warning:  #177-D: variable "ucRam"  was declared but never referenced
+        unsigned int ucRam = 0,cardIdRam = 0;
+../Core/Src/main.c(387): warning:  #177-D: variable "cardIdRam"  was declared but never referenced
+        unsigned int ucRam = 0,cardIdRam = 0;
+../Core/Src/main.c(595): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        send(buff);
+../Core/Src/main.c(742): warning:  #188-D: enumerated type mixed with another type
+                led(1);
+../Core/Src/main.c(744): warning:  #188-D: enumerated type mixed with another type
+                led(0);
+../Core/Src/main.c(746): warning:  #188-D: enumerated type mixed with another type
+                led(1);
+../Core/Src/main.c(827): warning:  #188-D: enumerated type mixed with another type
+                        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,1);
+../Core/Src/main.c(835): warning:  #188-D: enumerated type mixed with another type
+                        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,0);
+../Core/Src/main.c(846): warning:  #188-D: enumerated type mixed with another type
+                        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_10,1);
+../Core/Src/main.c(854): warning:  #188-D: enumerated type mixed with another type
+                        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_10,0);
+../Core/Src/main.c(1155): warning:  #223-D: function "FPRN_DeleteAllTemplate" declared implicitly
+                        FPRN_DeleteAllTemplate();
+../Core/Src/main.c(1179): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                                                                sscanf(fromAndroid,"e%dL",&idFR);       
+../Core/Src/main.c(1199): warning:  #223-D: function "FPRN_AddNewUser" declared implicitly
+                                                                                FPRN_AddNewUser(idFR);
+../Core/Src/main.c(1164): warning:  #177-D: variable "ResBuff"  was declared but never referenced
+        unsigned char ResBuff[2]={0};
+../Core/Src/main.c(1225): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                                for(char i=0;i<=strlen(fromAndroid);i++) 
+../Core/Src/main.c(1231): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                                        sscanf(fromAndroid,"d%dt",&idFR);                               
+../Core/Src/main.c(1232): warning:  #223-D: function "FPRN_DeleteTemplate" declared implicitly
+                                                        FPRN_DeleteTemplate(idFR);
+../Core/Src/main.c(1260): warning:  #223-D: function "FPRNCancelCmd" declared implicitly
+                                                FPRNCancelCmd();
+../Core/Src/main.c(1269): warning:  #223-D: function "FPRN_CancelCmd" declared implicitly
+                                                FPRN_CancelCmd();
+../Core/Src/main.c(1277): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                                for(char i=0;i<=strlen(fromAndroid);i++) 
+../Core/Src/main.c(1284): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                                        sscanf(fromAndroid,"R%dd",&idFR);                               
+../Core/Src/main.c(1285): warning:  #223-D: function "FPRN_GetTemplateByID" declared implicitly
+                                                        FPRN_GetTemplateByID(idFR); 
+../Core/Src/main.c(1701): warning:  #111-D: statement is unreachable
+                send("{\"T\":{\"Status\":129}}\n");
+../Core/Src/main.c(1715): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(sendTimeDate,"{\"T\":{\"H\":%d,\"M\":%d,\"S\":%d,\"Y\":%d,\"m\":%d,\"D\":%d,\"W\":%d}}\n",time.Hours,time.Minutes,time.Seconds,date.Year,date.Month,date.Date,date.WeekDay); 
+../Core/Src/main.c(2379): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(packToUsb,"{\"PackNo\":{\"Idx\":%u}}\n",PacketNo);
+../Core/Src/main.c(2369): warning:  #550-D: variable "pack"  was set but never used
+    unsigned char pack[7];
+../Core/Src/main.c(2459): warning:  #1293-D: assignment in condition
+      if(!(Res=GetPage(idx)))
+../Core/Src/main.c(2628): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(buf,"{\"CBR\":{\"Status\":0,\"Ins\":%s,\"BR\":%u}}\n",ins,baudRate);
+../Core/Src/main.c(6132): warning:  #188-D: enumerated type mixed with another type
+                POWERTAB(1);            
+../Core/Src/main.c(6140): warning:  #188-D: enumerated type mixed with another type
+                POWERTAB(0);            
+../Core/Src/main.c(6563): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(buf,"{\"CPUID\":{\"X1\":%8.8X,\"X2\":%8.8X,\"X3\":%8.8X}}\n",a,b,c);
+../Core/Src/main.c(6686): warning:  #177-D: variable "ucRam"  was declared but never referenced
+    unsigned int ucRam = 0,cardIdRam = 0;
+../Core/Src/main.c(6686): warning:  #177-D: variable "cardIdRam"  was declared but never referenced
+    unsigned int ucRam = 0,cardIdRam = 0;
+../Core/Src/main.c(6797): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(sendToAndroid,"{\"Mem\":{\"Head\":%u,\"Tail\":%u}}\n",trHead,trTail);
+../Core/Src/main.c(6975): warning:  #188-D: enumerated type mixed with another type
+        POWERTAB(0)
+../Core/Src/main.c(6984): warning:  #188-D: enumerated type mixed with another type
+        POWERTAB(1)
+../Core/Src/main.c(7317): warning:  #223-D: function "FPRN_WriteTemplateByID" declared implicitly
+                                        FPRN_WriteTemplateByID(100,570,fromAndroid); 
+../Core/Src/main.c(7319): warning:  #223-D: function "CDC_FlushRxBuffer_FS" declared implicitly
+                                        CDC_FlushRxBuffer_FS();
+../Core/Src/main.c(7350): warning:  #223-D: function "Read_MFRC522" declared implicitly
+                                                printf("{\"C\":{\"ReaderType\":RC522,\"Version\":%d}}\n",Read_MFRC522(VersionReg));                               
+../Core/Src/main.c(7463): warning:  #223-D: function "FPRN_GetEmptyID" declared implicitly
+                                case 'G':  FPRN_GetEmptyID();            rxAndroid = 1; memset(fromAndroid,'\0',sizeof(fromAndroid)); break; //0x47
+../Core/Src/main.c(7465): warning:  #223-D: function "testConnection" declared implicitly
+                                case 'T':  testConnection();             rxAndroid = 1; memset(fromAndroid,'\0',sizeof(fromAndroid)); break; //0x54
+../Core/Src/main.c(7468): warning:  #223-D: function "GetFrimware" declared implicitly
+                                case 'v':  GetFrimware();                rxAndroid = 1; break; 
+../Core/Src/main.c(7528): warning:  #223-D: function "CDC_FlushRxBuffer_FS" declared implicitly
+                                        CDC_FlushRxBuffer_FS();
+../Core/Src/main.c(7554): warning:  #223-D: function "FPRN_Identify" declared implicitly
+                                FPRN_Identify(); 
+../Core/Src/main.c(7834): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
+      if(ISO14443_SingleTagSelect(sernum))
+../Core/Src/main.c(7836): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
+        if(ISO14443_SingleTagSelect(sernum))
+../Core/Src/main.c(7859): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                if(ISO14443_LoginE2(0,0x10))
+../Core/Src/main.c(7863): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
+                                         if(ISO14443_SingleTagSelect(sernum))
+../Core/Src/main.c(7865): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
+                                                if(ISO14443_SingleTagSelect(sernum))
+../Core/Src/main.c(7875): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(!ISO14443_ReadBlock(1,buffRC522))       
+../Core/Src/main.c(7992): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                                                sprintf(buffRC522,"{\"C\":{\"ID\":%d,\"UC\":%d}}\n",cardId,uc); // ID card , ersal UC card
+../Core/Src/main.c(7993): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
+                                                                                                send(buffRC522);  //ersal ID card       
+../Core/Src/main.c(8203): warning:  #177-D: variable "sTime"  was declared but never referenced
+    RTC_TimeTypeDef sTime = {0};
+../Core/Src/main.c(8204): warning:  #177-D: variable "DateToUpdate"  was declared but never referenced
+    RTC_DateTypeDef DateToUpdate = {0};
+../Core/Src/main.c: 75 warnings, 0 errors
+compiling stm32f1xx_it.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/stm32f1xx_it.c(150): warning:  #223-D: function "send" declared implicitly
+                send("{\"Recive\":{\"Status\":70}}\n");
+../Core/Src/stm32f1xx_it.c: 2 warnings, 0 errors
+compiling stm32f1xx_hal_msp.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/stm32f1xx_hal_msp.c: 1 warning, 0 errors
+compiling usb_device.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../USB_DEVICE/App/usbd_cdc_if.h(125): warning:  #1295-D: Deprecated declaration CDC_GetRxBufferBytesAvailable_FS - give arg types
+        uint16_t CDC_GetRxBufferBytesAvailable_FS();
+../USB_DEVICE/App/usbd_cdc_if.h(126): warning:  #1295-D: Deprecated declaration CDC_FlushRxBuffer_FS - give arg types
+        void CDC_FlushRxBuffer_FS();
+../USB_DEVICE/App/usb_device.c: 3 warnings, 0 errors
+compiling usbd_desc.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../USB_DEVICE/App/usbd_desc.c: 1 warning, 0 errors
+compiling usbd_cdc_if.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../USB_DEVICE/App/usbd_cdc_if.h(125): warning:  #1295-D: Deprecated declaration CDC_GetRxBufferBytesAvailable_FS - give arg types
+        uint16_t CDC_GetRxBufferBytesAvailable_FS();
+../USB_DEVICE/App/usbd_cdc_if.h(126): warning:  #1295-D: Deprecated declaration CDC_FlushRxBuffer_FS - give arg types
+        void CDC_FlushRxBuffer_FS();
+../USB_DEVICE/App/usbd_cdc_if.c: 3 warnings, 0 errors
+compiling usbd_conf.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../USB_DEVICE/Target/usbd_conf.c: 1 warning, 0 errors
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_pcd.c...
+compiling stm32f1xx_hal_pcd_ex.c...
+compiling stm32f1xx_ll_usb.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_iwdg.c...
+compiling stm32f1xx_hal_rtc_ex.c...
+compiling stm32f1xx_hal_spi.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_uart.c...
+compiling stm32f1xx_hal_rtc.c...
+..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c(573): warning:  #550-D: variable "days_elapsed"  was set but never used
+    uint32_t counter_time = 0U, days_elapsed = 0U, hours = 0U;
+..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c(1465): warning:  #177-D: function "RTC_DateUpdate"  was declared but never referenced
+  static void RTC_DateUpdate(RTC_HandleTypeDef* hrtc, uint32_t DayElapsed)
+..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c: 2 warnings, 0 errors
+compiling stm32f1xx_hal_i2c.c...
+compiling system_stm32f1xx.c...
+compiling usbd_core.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c: 1 warning, 0 errors
+compiling usbd_ctlreq.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c: 1 warning, 0 errors
+compiling usbd_ioreq.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c: 1 warning, 0 errors
+compiling usbd_cdc.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c: 1 warning, 0 errors
+compiling ee.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\ee.c: 1 warning, 0 errors
+compiling softuart.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\softuart.c: 1 warning, 0 errors
+compiling stm32f1_rc522.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\stm32f1_rc522.c: 1 warning, 0 errors
+compiling ecard.c...
+..\Lib\ecard.h(50): warning:  #47-D: incompatible redefinition of macro "UnSuccess"  (declared at line 49)
+  #define UnSuccess 112     // parameter namotabar ast 
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\ecard.c(592): warning:  #9-D: nested comment is not allowed
+   /* W0 = InverseTable[(unsigned char)(T0[0])]; W1 = InverseTable[(unsigned char)(T0[3] >> 8)];
+..\Lib\ecard.c(1048): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                                                if(ISO14443_SingleTagSelect(snr)) 
+..\Lib\ecard.c(1055): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                if(ISO14443_LoginE2(0,0x10)) 
+..\Lib\ecard.c(1058): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+                                                if(ISO14443_ReadBlock(1, buf)) return(S_TimeOut); 
+..\Lib\ecard.c(1077): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(10);
+..\Lib\ecard.c(1078): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+                                                if(ISO14443_ReadBlock(CreditBlock, buf)) return(20);  
+..\Lib\ecard.c(1096): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                        if(ISO14443_LoginE2(6,0x14)) return(12);   
+..\Lib\ecard.c(1097): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+                                                                        if(ISO14443_ReadValueBlock(24, &Value)) 
+..\Lib\ecard.c(1978): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(6,0x14))
+..\Lib\ecard.c(1980): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(Res=ISO14443_ReadValueBlock(24, &loc))
+..\Lib\ecard.c(1980): warning:  #1293-D: assignment in condition
+    if(Res=ISO14443_ReadValueBlock(24, &loc))
+..\Lib\ecard.c(2003): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(Block/4,0x35))
+..\Lib\ecard.c(2006): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(Block, buf))
+..\Lib\ecard.c(2025): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(CreditSector,CreditLogin)) { return(11); }
+..\Lib\ecard.c(2026): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+    if(ISO14443_WriteValue(CreditBlock,Etebar)) { return(12); }
+..\Lib\ecard.c(1974): warning:  #177-D: variable "Buffer"  was declared but never referenced
+  unsigned char Buffer[16];
+..\Lib\ecard.c(1975): warning:  #177-D: variable "j"  was declared but never referenced
+  unsigned char Res, j, BCC=0, Block;  
+..\Lib\ecard.c(2045): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(Block/4,0x35)) return(3);                
+..\Lib\ecard.c(2046): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(Block, buf)) return(4);
+..\Lib\ecard.c(2113): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(6,0x35))
+..\Lib\ecard.c(2115): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+    if(ISO14443_WriteValue(24, loc))
+..\Lib\ecard.c(2129): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(0,0x10)) return(1);
+..\Lib\ecard.c(2130): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(1, buf)) return(2); 
+..\Lib\ecard.c(2147): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(6,0x14)) return(10);                
+..\Lib\ecard.c(2148): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(ISO14443_ReadValueBlock(24, &Value)) return(11);
+..\Lib\ecard.c(2157): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(i/4,0x35)) return(13);                
+..\Lib\ecard.c(2158): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(i, buf)) return(14);
+..\Lib\ecard.c(2163): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(12);
+..\Lib\ecard.c(2164): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(ISO14443_ReadValueBlock(CreditBlock, &CurECardInfo.Etebar))  
+..\Lib\ecard.c(2124): warning:  #177-D: variable "BCC"  was declared but never referenced
+  unsigned char BCC, i;
+..\Lib\ecard.c(2220): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(Block/4,0x35)) return(1);
+..\Lib\ecard.c(2221): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+                  if(ISO14443_WriteBlock(Block,CurECardInfo.OPBlock))  return(2);
+..\Lib\ecard.c(2224): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(6,0x35))
+..\Lib\ecard.c(2226): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                     if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(2236): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+                  if(ISO14443_WriteValue(24, Block)) return(4);
+..\Lib\ecard.c(2239): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(CreditSector,CreditLogin))
+..\Lib\ecard.c(2241): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                     if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(2248): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+                  if(ISO14443_WriteValue(CreditBlock, CurECardInfo.Etebar)) return(6);
+..\Lib\ecard.c(2251): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                 if(ISO14443_LoginE2(4,0x39)) return(10);
+..\Lib\ecard.c(2252): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+                   if(ISO14443_WriteBlock(18,HediyeBuf))  return(6);
+..\Lib\ecard.c(2253): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                 if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(5);
+..\Lib\ecard.c(2256): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+                  if(ISO14443_ReadValueBlock(CreditBlock, &Etebar)) return(7);
+..\Lib\ecard.c(2266): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(6,0x35)) {return(3);}
+..\Lib\ecard.c(2270): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+                  if(ISO14443_WriteValue(24, Block)) return(4);
+..\Lib\ecard.c(2273): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(CreditSector,CreditLogin))
+..\Lib\ecard.c(2275): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                     if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(2282): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+                  if(ISO14443_WriteValue(CreditBlock, CurECardInfo.Etebar)) return(6);
+..\Lib\ecard.c(2285): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                        if(ISO14443_LoginE2(4,0x39)) return(10);
+..\Lib\ecard.c(2286): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+                    if(ISO14443_WriteBlock(18,HediyeBuf))  return(6);
+..\Lib\ecard.c(2287): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                        if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(5);
+..\Lib\ecard.c(2290): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+                  if(ISO14443_ReadValueBlock(CreditBlock, &Etebar)) return(7);
+..\Lib\ecard.c(2300): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(5);
+..\Lib\ecard.c(2301): warning:  #223-D: function "ISO14443_WriteValue" declared implicitly
+                  if(ISO14443_WriteValue(CreditBlock, CurECardInfo.Etebar)) return(6);
+..\Lib\ecard.c(2304): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                                if(ISO14443_LoginE2(4,0x39)) return(10);
+..\Lib\ecard.c(2305): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+                      if(ISO14443_WriteBlock(18,HediyeBuf))  return(6);
+..\Lib\ecard.c(2306): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                                                                if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(5);
+..\Lib\ecard.c(2309): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+                  if(ISO14443_ReadValueBlock(CreditBlock, &Etebar)) return(7);
+..\Lib\ecard.c(2319): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                  if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(5);                
+..\Lib\ecard.c(2320): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+                  if(ISO14443_ReadValueBlock(CreditBlock, &Etebar)) return(7);
+..\Lib\ecard.c(2390): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr))  {
+..\Lib\ecard.c(2457): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(CreditSector,CreditLogin)) continue;
+..\Lib\ecard.c(2458): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(CreditBlock, buf)) continue;  
+..\Lib\ecard.c(2563): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr)) {if(ISO14443_SingleTagSelect(snr)){ SelectTimeout++; continue; }}
+..\Lib\ecard.c(2638): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr)) 
+..\Lib\ecard.c(2641): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(4,0x39)) return(10);
+..\Lib\ecard.c(2642): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+        if(ISO14443_ReadBlock(18, buf)) return(20);  //Hediye
+..\Lib\ecard.c(2697): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+    if(ISO14443_SingleTagSelect(snr)) 
+..\Lib\ecard.c(2704): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(0,0x10)) 
+..\Lib\ecard.c(2707): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(1, buf)) return(S_TimeOut); 
+..\Lib\ecard.c(2723): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(CreditSector,CreditLogin)) return(10);
+..\Lib\ecard.c(2727): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+       if(ISO14443_ReadBlock(18, buf)) return(20);  //Hediye
+..\Lib\ecard.c(2742): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(CreditBlock, buf)) return(20);  
+..\Lib\ecard.c(2760): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(6,0x14)) return(12);   
+..\Lib\ecard.c(2761): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+      if(ISO14443_ReadValueBlock(24, &Value)) 
+..\Lib\ecard.c(2868): warning:  #111-D: statement is unreachable
+         break;
+..\Lib\ecard.c(2882): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+     if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(2888): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(0,0x10)) continue;
+..\Lib\ecard.c(2889): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+    if(ISO14443_ReadBlock(1,buf)) continue;
+..\Lib\ecard.c(2908): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(6,0x14))         continue;
+..\Lib\ecard.c(2909): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(ISO14443_ReadValueBlock(24,&H)) continue;
+..\Lib\ecard.c(2911): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(5,0x37))            { continue; }
+..\Lib\ecard.c(2912): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(ISO14443_ReadValueBlock(20,&Credit)) { continue; }
+..\Lib\ecard.c(2917): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+    if(ISO14443_LoginE2(6,0x14))         continue;
+..\Lib\ecard.c(2918): warning:  #223-D: function "ISO14443_ReadValueBlock" declared implicitly
+    if(ISO14443_ReadValueBlock(24,&H)) continue;
+..\Lib\ecard.c(2924): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+    RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(2924): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+    RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(2925): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+    if(RetValue==S_TimeOut)   RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(2925): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+    if(RetValue==S_TimeOut)   RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(2960): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+          if(ISO14443_SingleTagSelect(snr)) if(ISO14443_SingleTagSelect(snr))  continue; 
+..\Lib\ecard.c(2964): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+        if(ISO14443_LoginE2(Block/4,0x14))
+..\Lib\ecard.c(2966): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+           if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(2973): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+        if(ISO14443_ReadBlock(Block,buf))
+..\Lib\ecard.c(2975): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+           if(ISO14443_LoginE2(Block/4,0x14))
+..\Lib\ecard.c(2977): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+              if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3008): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Row=%d*",Counter+1);
+..\Lib\ecard.c(3013): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"OP=%d*",Buffer[5]);
+..\Lib\ecard.c(3022): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Etebar=%u*",tempSend.temp);         
+..\Lib\ecard.c(3028): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                sprintf(globalBuff,"Year=%d*",(Buffer[6]>>4)+1400);
+..\Lib\ecard.c(3030): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                sprintf(globalBuff,"Year=%d*",(Buffer[6]>>4)+86+1300);
+..\Lib\ecard.c(3037): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Month=%d*",(Buffer[6]&0x0F));
+..\Lib\ecard.c(3042): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Day=%d*",(Buffer[7]));
+..\Lib\ecard.c(3050): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"RemEtebar=%u*",(tempSend.temp));
+..\Lib\ecard.c(3057): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"DID=%u*",(tempSend.temp));
+..\Lib\ecard.c(3062): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Hour=%d*",Buffer[13]);
+..\Lib\ecard.c(3067): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"Min=%d,\n",Buffer[14]);
+..\Lib\ecard.c(2839): warning:  #177-D: variable "key"  was declared but never referenced
+  unsigned char key,RetValue;
+..\Lib\ecard.c(2840): warning:  #177-D: variable "Value"  was declared but never referenced
+  signed long int Credit,Value,H,HediyeCredit;
+..\Lib\ecard.c(2841): warning:  #177-D: variable "OldLoc"  was declared but never referenced
+  signed long int  OldLoc,Li,CardID;
+..\Lib\ecard.c(2842): warning:  #177-D: variable "Temp"  was declared but never referenced
+  unsigned char snr[10],Temp[20],Head_Loc;
+..\Lib\ecard.c(2842): warning:  #550-D: variable "Head_Loc"  was set but never used
+  unsigned char snr[10],Temp[20],Head_Loc;
+..\Lib\ecard.c(2843): warning:  #177-D: variable "idx"  was declared but never referenced
+  unsigned char buf[32],idx;
+..\Lib\ecard.c(2845): warning:  #177-D: variable "str"  was declared but never referenced
+  char str[120];
+..\Lib\ecard.c(2846): warning:  #177-D: variable "locCounter"  was declared but never referenced
+  unsigned char BCC=0, Block,locCounter;
+..\Lib\ecard.c(2847): warning:  #177-D: variable "Len"  was declared but never referenced
+  unsigned short Len, i;
+..\Lib\ecard.c(2848): warning:  #177-D: variable "Card_InfoNumber"  was declared but never referenced
+  unsigned char Counter=0,Card_InfoNumber=0,loc=0,OpSize=9,Counter2=0;
+..\Lib\ecard.c(2848): warning:  #177-D: variable "OpSize"  was declared but never referenced
+  unsigned char Counter=0,Card_InfoNumber=0,loc=0,OpSize=9,Counter2=0;
+..\Lib\ecard.c(2848): warning:  #177-D: variable "Counter2"  was declared but never referenced
+  unsigned char Counter=0,Card_InfoNumber=0,loc=0,OpSize=9,Counter2=0;
+..\Lib\ecard.c(2849): warning:  #177-D: variable "CreditLogin2"  was declared but never referenced
+  unsigned short UC,Timeout,CreditLogin2=0x35;
+..\Lib\ecard.c(2850): warning:  #550-D: variable "CurrentCardCredit"  was set but never used
+  unsigned int CurrentCardCredit=0;
+..\Lib\ecard.c(3178): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+      if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3185): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(0,0x10))
+..\Lib\ecard.c(3188): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(1,TicketBuffer)) 
+..\Lib\ecard.c(3224): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(5,0x37)) 
+..\Lib\ecard.c(3226): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3232): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(22, TicketBuffer)) 
+..\Lib\ecard.c(3234): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+        if(ISO14443_LoginE2(5,0x37)) 
+..\Lib\ecard.c(3236): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+          if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3254): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(4,0x39)) 
+..\Lib\ecard.c(3256): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3266): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+        if(ISO14443_ReadBlock(18, TicketBuffer)) continue;  //Hediye
+..\Lib\ecard.c(3280): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(17, TicketBuffer)) 
+..\Lib\ecard.c(3282): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+        if(ISO14443_LoginE2(4,0x39)) 
+..\Lib\ecard.c(3284): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+          if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3438): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                sprintf(buffTransaction,"{\"C\":{\"Status\":%d,\"UC\":%u,\"ID\":%u,\"Etebar\":%u,\"PreEtebar\":%u,\"Gt\":%u,\"Price\":%u,\"Hedie\":%u}}\n",Status,UC,ID,Etebar,PreEtebar,HPayment,Payment,HNPayment);
+..\Lib\ecard.c(3117): warning:  #177-D: variable "TicketBuffer2"  was declared but never referenced
+  unsigned char TicketBuffer[32],TicketBuffer2[32],LastOP,OPIndex; 
+..\Lib\ecard.c(3717): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if(TicketBuffer[2]<0)   return(0);                
+..\Lib\ecard.c(3723): warning:  #186-D: pointless comparison of unsigned integer with zero
+           if((TicketBuffer[3]<0)||(TicketBuffer[4]<1)||(TicketBuffer[4]>12)||(TicketBuffer[5]<1)||(TicketBuffer[5]>31))  // ==== edited ==== //
+..\Lib\ecard.c(3761): warning:  #186-D: pointless comparison of unsigned integer with zero
+           if((TicketBuffer[3]<0)||(TicketBuffer[4]<1)||(TicketBuffer[4]>12)||(TicketBuffer[5]<1)||(TicketBuffer[5]>31))     // ==== edited ==== //
+..\Lib\ecard.c(3790): warning:  #186-D: pointless comparison of unsigned integer with zero
+           if((TicketBuffer[3]<0)||(TicketBuffer[4]<1)||(TicketBuffer[4]>12)||(TicketBuffer[5]<1)||(TicketBuffer[5]>31))    // ==== edited ==== //
+..\Lib\ecard.c(3846): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+       if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3851): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+      if(ISO14443_LoginE2(0,0x10))
+..\Lib\ecard.c(3853): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+         if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3860): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(1,TicketBuffer2)) {  continue; }  
+..\Lib\ecard.c(3876): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+          if(ISO14443_LoginE2(4,0x39)) 
+..\Lib\ecard.c(3878): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+        if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3885): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+      if(ISO14443_ReadBlock(17, TicketBuffer2)) 
+..\Lib\ecard.c(3887): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                        if(ISO14443_LoginE2(4,0x39)) 
+..\Lib\ecard.c(3889): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+          if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3915): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+      if(ISO14443_WriteBlock(18,HediyeBuf))  continue;
+..\Lib\ecard.c(3920): warning:  #167-D: argument of type "long *" is incompatible with parameter of type "signed int *"
+         RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3920): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+         RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3921): warning:  #167-D: argument of type "long *" is incompatible with parameter of type "signed int *"
+         if(RetValue==S_TimeOut)  RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3921): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+         if(RetValue==S_TimeOut)  RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3937): warning:  #167-D: argument of type "long *" is incompatible with parameter of type "signed int *"
+            RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3937): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+            RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3938): warning:  #167-D: argument of type "long *" is incompatible with parameter of type "signed int *"
+            if(RetValue==S_TimeOut)  RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3938): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "signed int *"
+            if(RetValue==S_TimeOut)  RetValue=GetCardEtebar1(&Credit,&HediyeCredit);
+..\Lib\ecard.c(3952): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                if(ISO14443_LoginE2(4,0x39))
+..\Lib\ecard.c(3954): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                        if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3961): warning:  #223-D: function "ISO14443_WriteBlock" declared implicitly
+                if(ISO14443_WriteBlock(17, TicketBuffer)) 
+..\Lib\ecard.c(3963): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                        if(ISO14443_LoginE2(4,0x39))
+..\Lib\ecard.c(3965): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                                        if(ISO14443_SingleTagSelect(snr))
+..\Lib\ecard.c(3974): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                        sprintf(globalBuff,"{\"C\":{\"Status\":0,\"UC\":%u,\"ID\":%u,\"Etebar\":%u,\"PreEtebar\":%u}}\n",UC,CardID,Credit,PreEtebar);   
+..\Lib\ecard.c(3978): warning:  #111-D: statement is unreachable
+        return(0);
+..\Lib\ecard.c(3687): warning:  #177-D: variable "Status"  was declared but never referenced
+  unsigned char snr[10],Status=0;
+..\Lib\ecard.c(3688): warning:  #177-D: variable "status"  was declared but never referenced
+  unsigned int status=0;    
+..\Lib\ecard.c(3692): warning:  #177-D: variable "ID"  was declared but never referenced
+  unsigned long int ID,CardID,Li;
+..\Lib\ecard.c(3694): warning:  #177-D: variable "Etebar"  was declared but never referenced
+  signed long int Etebar=0, PreEtebar=0,HediyeCredit; 
+..\Lib\ecard.c(3991): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                                        if(ISO14443_SingleTagSelect(ser))
+..\Lib\ecard.c(3997): warning:  #223-D: function "ISO14443_LoginE2" declared implicitly
+                                        if(ISO14443_LoginE2(4,0x39)) 
+..\Lib\ecard.c(3999): warning:  #223-D: function "ISO14443_SingleTagSelect" declared implicitly
+                                                                                if(ISO14443_SingleTagSelect(ser))
+..\Lib\ecard.c(4007): warning:  #223-D: function "ISO14443_ReadBlock" declared implicitly
+                                        if(!ISO14443_ReadBlock(17, buf)) 
+..\Lib\ecard.c(4024): warning:  #167-D: argument of type "unsigned long *" is incompatible with parameter of type "signed int *"
+                                                                                                                                                if(!GetCardEtebar1(&etebar,&Hetebar))
+..\Lib\ecard.c(4026): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                                                                                                        sprintf(buf2,"{\"C\":{\"ID\":%d,\"UC\":%d,\"Etebar\":%u,\"Hedie\":%d,\"Model\":%d}}\n",cardId,uc,etebar,Hetebar,SubGroup);                                                                                                                                              
+..\Lib\ecard.c(3983): warning:  #550-D: variable "Discount"  was set but never used
+        unsigned char buf[16],buf2[200],BCC,i,SubGroup,Discount;
+..\Lib\ecard.c(4099): warning:  #1-D: last line of file ends without a newline
+  //#endif
+..\Lib\ecard.c: 178 warnings, 0 errors
+compiling finger.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\finger.c(42): warning:  #177-D: variable "STR"  was declared but never referenced
+  unsigned char BUF[50];        unsigned char STR[200];
+..\Lib\finger.c(96): warning:  #177-D: variable "STR"  was declared but never referenced
+        unsigned char STR[200];
+..\Lib\finger.c(275): warning:  #111-D: statement is unreachable
+        bufferLen = 0;
+..\Lib\finger.c(354): warning:  #940-D: missing return statement at end of non-void function "FPRN_CancelCmd" 
+  }
+..\Lib\finger.c(367): warning:  #940-D: missing return statement at end of non-void function "FPRNCancelCmd" 
+  }
+..\Lib\finger.c(413): warning:  #223-D: function "send" declared implicitly
+                                send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"DeleteALL\",\"Status\":-1}}\n"); // try again
+..\Lib\finger.c(418): warning:  #223-D: function "sprintf" declared implicitly
+                        sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"DeleteALL\",\"Status\":%d}}\n",GetResponse[6]); 
+..\Lib\finger.c(419): warning:  #223-D: function "send" declared implicitly
+                        send(ResBuff);
+..\Lib\finger.c(405): warning:  #177-D: variable "RetValue"  was declared but never referenced
+                        unsigned char ResBuff[100]={0},RetValue=0; 
+..\Lib\finger.c(443): warning:  #223-D: function "sprintf" declared implicitly
+                                        sprintf(ResBuff,"{\"F\":{\"Type\":\"Identify\",\"Template\":%d}}\n",Status);    
+..\Lib\finger.c(444): warning:  #223-D: function "send" declared implicitly
+            send(ResBuff);
+..\Lib\finger.c(452): warning:  #223-D: function "sprintf" declared implicitly
+                                        sprintf(ResBuff,"{\"F\":{\"Type\":\"Identify\",\"Status\":%d}}\n",Status);
+..\Lib\finger.c(454): warning:  #223-D: function "send" declared implicitly
+                                  send(ResBuff);
+..\Lib\finger.c(472): warning:  #177-D: variable "_ID"  was declared but never referenced
+  unsigned char _ID[4];
+..\Lib\finger.c(498): warning:  #223-D: function "send" declared implicitly
+                send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Delete\",\"Status\":-1}}\n"); // try again
+..\Lib\finger.c(506): warning:  #223-D: function "sprintf" declared implicitly
+                        sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Delete\",\"Status\":%d}}\n",GetResponse[6]);
+..\Lib\finger.c(510): warning:  #223-D: function "sprintf" declared implicitly
+                        sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Delete\",\"Status\":%d}}\n",Status);
+..\Lib\finger.c(512): warning:  #223-D: function "send" declared implicitly
+                send(ResBuff);                  
+..\Lib\finger.c(548): warning:  #223-D: function "send" declared implicitly
+                        send("{\"F\":{\"Type\":\"ReadTemplate\",\"Status\":-1}}\n");
+..\Lib\finger.c(562): warning:  #223-D: function "sprintf" declared implicitly
+                        sprintf(ResBuff,"{\"F\":{\"Type\":\"ReadTemplate\",\"Status\":%d}}\n",RetValue);
+..\Lib\finger.c(563): warning:  #223-D: function "send" declared implicitly
+                        send(ResBuff);
+..\Lib\finger.c(594): warning:  #223-D: function "send" declared implicitly
+         send("{\"F\":{\"Type\":\"ReadTemplate\",\"Status\":-1}}\n"); // try again 
+..\Lib\finger.c(611): warning:  #223-D: function "sprintf" declared implicitly
+         sprintf(ResBuff,"{\"F\":{\"Type\":\"ReadTemplate\",\"ID\":%d,\"DataSize\":%d,\"Data\":\"",FPID,Len);
+..\Lib\finger.c(612): warning:  #223-D: function "send" declared implicitly
+         send(ResBuff);
+..\Lib\finger.c(620): warning:  #223-D: function "CDC_Transmit_FS" declared implicitly
+                        CDC_Transmit_FS(temp,63);
+..\Lib\finger.c(627): warning:  #223-D: function "CDC_Transmit_FS" declared implicitly
+         CDC_Transmit_FS(temp,cnt);
+..\Lib\finger.c(635): warning:  #223-D: function "sprintf" declared implicitly
+         sprintf(ResBuff,"{\"F\":{\"Type\":\"ReadTemplate\",\"Status\":%d}}\n",RetValue);
+..\Lib\finger.c(636): warning:  #223-D: function "send" declared implicitly
+         send(ResBuff);
+..\Lib\finger.c(679): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                 sprintf(ResBuff,"{\"F\":{\"Type\":\"WriteTemplate\",\"WriteTemplateID\":%d,\"Status\":0}}\n",Ftamplate_ID);
+..\Lib\finger.c(680): warning:  #223-D: function "send" declared implicitly
+                                                                                                                 send(ResBuff);
+..\Lib\finger.c(684): warning:  #223-D: function "send" declared implicitly
+                                                                                                 send("{\"F\":{\"Type\":\"WriteTemplate\",\"Status\":100}}\n"); 
+..\Lib\finger.c(688): warning:  #223-D: function "send" declared implicitly
+                                                                                                                 if(GetResponse[8] == 0x60) send("{\"F\":{\"Type\":\"WriteTemplate\",\"Status\":96}}\n");
+..\Lib\finger.c(689): warning:  #223-D: function "send" declared implicitly
+                                                                                                                 if(GetResponse[8] == 0x70) send("{\"F\":{\"Type\":\"WriteTemplate\",\"Status\":112}}\n");
+..\Lib\finger.c(693): warning:  #223-D: function "send" declared implicitly
+                                                                 send("{\"F\":{\"Type\":\"WriteTemplate\",\"Status\":-1}}\n");
+..\Lib\finger.c(643): warning:  #177-D: variable "i"  was declared but never referenced
+   unsigned int i,RetValue = 100;
+..\Lib\finger.c(643): warning:  #177-D: variable "RetValue"  was declared but never referenced
+   unsigned int i,RetValue = 100;
+..\Lib\finger.c(711): warning:  #223-D: function "send" declared implicitly
+                                                                 send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"GetEmptyID\",\"Status\":-1}}\n"); // try again
+..\Lib\finger.c(721): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"GetEmptyID\",\"ID\":%d}}\n",RetValue); //sprintf(ResBuff,"Min EmptyID:%d\n",RetValue);
+..\Lib\finger.c(723): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"GetEmptyID\",\"Status\":%d}}\n",RetValue); //sprintf(ResBuff,"EmptyID Status:%d\n",RetValue); 
+..\Lib\finger.c(724): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                send(ResBuff);
+..\Lib\finger.c(754): warning:  #223-D: function "send" declared implicitly
+                                                                                                                         send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Enroll\",\"Status\":-1}}\n"); // try again
+..\Lib\finger.c(779): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                                                                                                                                 send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Cansel\"}}\n");  
+..\Lib\finger.c(783): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                                                         sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",value);
+..\Lib\finger.c(784): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                                                         send(ResBuff);
+..\Lib\finger.c(805): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                                                                                 send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Cansel\"}}\n");  
+..\Lib\finger.c(809): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                         sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",value);                            
+..\Lib\finger.c(810): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                         send(ResBuff);
+..\Lib\finger.c(830): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                                                                                 send("{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Cansel\"}}\n");  
+..\Lib\finger.c(834): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                         sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",value);
+..\Lib\finger.c(835): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                         send(ResBuff);
+..\Lib\finger.c(847): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                         sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",value);
+..\Lib\finger.c(848): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                         send(ResBuff);
+..\Lib\finger.c(863): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                 if(retu == 60) { retu=0; FPRNCancelCmd(); memset(GetResponse,'\0',sizeof(GetResponse)); IdentifyFlag = buffIdentifyFlag;  send("{\"F\":{\"Type\":\"Enroll\",\"Status\":18}}\n"); return 0;}
+..\Lib\finger.c(886): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                                                                 sprintf(ResBuff,"{\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",value);
+..\Lib\finger.c(888): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                                                                                                                 sprintf(ResBuff,"{\"F\":{\"Type\":\"Enroll\",\"Status\":%d}}\n",33);
+..\Lib\finger.c(890): warning:  #223-D: function "send" declared implicitly
+                                                                                                                                                                                         send(ResBuff);
+..\Lib\finger.c(899): warning:  #223-D: function "send" declared implicitly
+                                                                if(Exit_While==1)  send("{\"F\":{\"Type\":\"Enroll\",\"Status\":0}}\n");
+..\Lib\finger.c(734): warning:  #550-D: variable "status"  was set but never used
+                                unsigned char status = 0;
+..\Lib\finger.c(977): warning:  #223-D: function "send" declared implicitly
+        send("Sector Filled,");
+..\Lib\finger.c(992): warning:  #223-D: function "sprintf" declared implicitly
+                                sprintf(ResBuff,"%d,",cntt); 
+..\Lib\finger.c(1012): warning:  #223-D: function "sprintf" declared implicitly
+                                sprintf(ResBuff,"%d,",ID); 
+..\Lib\finger.c(1022): warning:  #223-D: function "sprintf" declared implicitly
+        sprintf(ResBuff,"\nCount:%d\n",cnt);
+..\Lib\finger.c(1034): warning:  #223-D: function "send" declared implicitly
+                send("{\"F\":{\"Type\":\"TestConnection\",\"Status\":0}}\n");
+..\Lib\finger.c(1036): warning:  #223-D: function "send" declared implicitly
+                send("{\"F\":{\"Type\":\"TestConnection\",\"Status\":18}}\n");  
+..\Lib\finger.c(1051): warning:  #940-D: missing return statement at end of non-void function "FPRN_GetSecurityLevel" 
+  }
+..\Lib\finger.c(1043): warning:  #177-D: variable "RetValue"  was declared but never referenced
+        unsigned char ResBuff[50]={0},RetValue=0; 
+..\Lib\finger.c(1063): warning:  #940-D: missing return statement at end of non-void function "FPRN_SetSecurityLevel" 
+  }
+..\Lib\finger.c(1055): warning:  #177-D: variable "RetValue"  was declared but never referenced
+        unsigned char ResBuff[50]={0},RetValue=0;   
+..\Lib\finger.c(1075): warning:  #223-D: function "sprintf" declared implicitly
+                sprintf(ResBuff,"{\"Receive\":{\"Status\":26},\"F\":{\"Type\":\"Frimware\",\"Status\":%d.%d}}\n",GetResponse[8],GetResponse[9]);        
+..\Lib\finger.c(1076): warning:  #223-D: function "send" declared implicitly
+      send(ResBuff);            
+..\Lib\finger.c(1079): warning:  #940-D: missing return statement at end of non-void function "GetFrimware" 
+  }
+..\Lib\finger.c(1080): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\finger.c: 73 warnings, 0 errors
+compiling iso14443ab.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\iso14443ab.c(24): warning:  #940-D: missing return statement at end of non-void function "MFRC531_WriteMasterKey" 
+  }
+..\Lib\iso14443ab.c(53): warning:  #223-D: function "MFRC522_Check" declared implicitly
+    if(MFRC522_Check(current_card_snr))
+..\Lib\iso14443ab.c(46): warning:  #177-D: variable "tmp"  was declared but never referenced
+  unsigned char i,tmp;
+..\Lib\iso14443ab.c(47): warning:  #177-D: variable "status"  was declared but never referenced
+  unsigned char status;
+..\Lib\iso14443ab.c(48): warning:  #177-D: variable "data"  was declared but never referenced
+  unsigned char data[32]; 
+..\Lib\iso14443ab.c(49): warning:  #177-D: variable "Len"  was declared but never referenced
+  unsigned int Len=0;
+..\Lib\iso14443ab.c(152): warning:  #111-D: statement is unreachable
+    return(1);
+..\Lib\iso14443ab.c(160): warning:  #940-D: missing return statement at end of non-void function "ISO14443_Login" 
+  }
+..\Lib\iso14443ab.c(188): warning:  #177-D: variable "i"  was declared but never referenced
+  unsigned char i;
+..\Lib\iso14443ab.c(191): warning:  #177-D: variable "d"  was declared but never referenced
+  unsigned char d[16]; 
+..\Lib\iso14443ab.c: 11 warnings, 0 errors
+compiling algorithm.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\algorithm.c(123): warning:  #68-D: integer conversion resulted in a change of sign
+                an_x[k] = -1*(pun_ir_buffer[k] - un_ir_mean) ; 
+..\Lib\algorithm.c(95): warning:  #177-D: variable "un_only_once"  was declared but never referenced
+    unsigned int  un_ir_mean =0, un_only_once=0; 
+..\Lib\algorithm.c(97): warning:  #177-D: variable "s"  was declared but never referenced
+    signed int i=0, s=0, m=0, n_exact_ir_valley_locs_count=0, n_middle_idx=0;
+..\Lib\algorithm.c(97): warning:  #177-D: variable "m"  was declared but never referenced
+    signed int i=0, s=0, m=0, n_exact_ir_valley_locs_count=0, n_middle_idx=0;
+..\Lib\algorithm.c(98): warning:  #177-D: variable "n_c_min"  was declared but never referenced
+    signed int n_th1=0, n_npks=0, n_c_min=0;
+..\Lib\algorithm.c(100): warning:  #177-D: variable "an_exact_ir_valley_locs"  was declared but never referenced
+    signed int an_exact_ir_valley_locs[15]={0};
+..\Lib\algorithm.c(101): warning:  #177-D: variable "an_dx_peak_locs"  was declared but never referenced
+    signed int an_dx_peak_locs[15]={0};
+..\Lib\algorithm.c(110): warning:  #177-D: variable "buf"  was declared but never referenced
+    unsigned char buf[30];
+..\Lib\algorithm.c(86): warning:  #177-D: variable "an_dx"  was declared but never referenced
+  static int32_t an_dx[BUFFER_SIZE - MA4_SIZE]; // delta
+..\Lib\algorithm.c: 10 warnings, 0 errors
+compiling MAX30102.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\MAX30102.c(1024): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                  sprintf(buf,"{\"M\":{\"Smple\":%ld}}\n",ir_sample);
+..\Lib\MAX30102.c(1088): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\MAX30102.c: 3 warnings, 0 errors
+compiling crc16.c...
+compiling Dispenser.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\Dispenser.c(277): warning:  #1-D: last line of file ends without a newline
+  //=======================================================
+..\Lib\Dispenser.c: 2 warnings, 0 errors
+compiling Acceptor.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\Acceptor.c(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\Acceptor.c: 2 warnings, 0 errors
+compiling pn532.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\pn532.c(139): warning:  #186-D: pointless comparison of unsigned integer with zero
+                if(params_length < 0 )
+..\Lib\pn532.c: 2 warnings, 0 errors
+compiling pn532_stm32f1.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\pn532_stm32f1.c: 1 warning, 0 errors
+compiling UHF.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\UHF.c(385): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\UHF.c: 2 warnings, 0 errors
+compiling Remote.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\Remote.c(155): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\Remote.c: 2 warnings, 0 errors
+compiling FontIcon.c...
+compiling LCD.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\LCD.c(2094): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\LCD.c: 2 warnings, 0 errors
+compiling sha-1.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\sha-1.c(135): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\sha-1.c: 2 warnings, 0 errors
+compiling flash.c...
+..\Lib\define.h(161): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Lib\flash.c(32): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)   
+..\Lib\flash.c(36): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                          
+..\Lib\flash.c(44): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)  
+..\Lib\flash.c(48): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                     
+..\Lib\flash.c(55): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                     
+..\Lib\flash.c(57): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c(54): warning:  #177-D: variable "recv"  was declared but never referenced
+    u8 send[1] = {W25X_WriteEnable}, recv = 0;
+..\Lib\flash.c(64): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)
+..\Lib\flash.c(66): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                          
+..\Lib\flash.c(63): warning:  #177-D: variable "recv"  was declared but never referenced
+    u8 send[1] = {W25X_WriteDisable} , recv = 0;
+..\Lib\flash.c(74): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0) 
+..\Lib\flash.c(85): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                             
+..\Lib\flash.c(95): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                         
+..\Lib\flash.c(112): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c(122): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                           
+..\Lib\flash.c(138): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                   
+..\Lib\flash.c(119): warning:  #177-D: variable "recv"  was declared but never referenced
+    u8 send[1] = {W25X_PageProgram} , recv = 0;
+..\Lib\flash.c(148): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0) 
+..\Lib\flash.c(150): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                          
+..\Lib\flash.c(160): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                        
+..\Lib\flash.c(162): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c(174): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)
+..\Lib\flash.c(178): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                      
+..\Lib\flash.c(171): warning:  #177-D: variable "recv"  was declared but never referenced
+        u8 recv = 0;
+..\Lib\flash.c(191): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)  
+..\Lib\flash.c(206): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                          
+..\Lib\flash.c(187): warning:  #177-D: variable "recv"  was declared but never referenced
+        u8 recv = 0;
+..\Lib\flash.c(258): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                SPI_Flash_Read(SPI_FLASH_BUF,secpos*4096,4096);
+..\Lib\flash.c(271): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                        SPI_Flash_Write_NoCheck(SPI_FLASH_BUF,secpos*4096,4096);
+..\Lib\flash.c(278): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                SPI_Flash_Read(SPI_FLASH_BUF,WriteAddr,secremain);
+..\Lib\flash.c(319): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                SPI_Flash_Read(SPI_FLASH_BUF,secpos*4096,4096);
+..\Lib\flash.c(331): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                        SPI_Flash_Write_NoCheck(SPI_FLASH_BUF,secpos*4096,4096);
+..\Lib\flash.c(338): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "u8 *"
+                SPI_Flash_Read(SPI_FLASH_BUF,WriteAddr,secremain);
+..\Lib\flash.c(364): warning:  #177-D: variable "i"  was declared but never referenced
+  unsigned long int i=0;
+..\Lib\flash.c(375): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                     
+..\Lib\flash.c(377): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c(374): warning:  #177-D: variable "recv"  was declared but never referenced
+    u8 send[1] = {W25X_ENABLERESET}, recv = 0;
+..\Lib\flash.c(384): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                     
+..\Lib\flash.c(386): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c(382): warning:  #177-D: variable "recv"  was declared but never referenced
+    u8 send[1] = {W25X_RESETDEVICE}, recv = 0;
+..\Lib\flash.c(393): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(0)                     
+..\Lib\flash.c(395): warning:  #188-D: enumerated type mixed with another type
+        SPI_FLASH_CS(1)                           
+..\Lib\flash.c: 43 warnings, 0 errors
+linking...
+Program Size: Code=47888 RO-data=940 RW-data=612 ZI-data=13180  
+FromELF: creating hex file...
+After Build - User command #1: C:\Keil_v5\ARM\ARMCC\bin\fromelf.exe --bin --output=SPORT08300.bin .\Project\bin\SPORT08300.axf
+".\Project\bin\SPORT08300.axf" - 0 Error(s), 428 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM.CMSIS.6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_AndroidF1
+  C:\Users\Hp\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include
+  C:\Users\Hp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:6.0.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:51
+</pre>
+</body>
+</html>

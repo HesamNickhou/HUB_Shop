@@ -1,10 +1,15 @@
 #include "heart_beat.h"
 
 ADC_HandleTypeDef hadc1;
-uint16_t values[10];
 uint32_t adcTick = 0;
-uint8_t isPressed = 0;
+uint8_t fingerDetected = 0;
 unsigned char buffer[50];
+
+typedef enum {
+    SENSOR_IDLE = 0,
+    SENSOR_WAIT_STABLE,
+    SENSOR_MEASURING
+} SensorState;
 
 void ADC1_Init(void) {
 	__HAL_RCC_ADC1_CLK_ENABLE();
@@ -41,13 +46,72 @@ uint32_t ADC_Read(void) {
 }
 
 void heartBeat() {
+	static SensorState state   = SENSOR_IDLE;
+	static uint8_t lowCounter  = 0;
+	static uint8_t highCounter = 0;
+	
 	if ((HAL_GetTick() - adcTick) >= 60) {
 		unsigned long heart = ADC_Read();
-		//sprintf(buffer, "{\"M\":{\"Smple\":%ld}}\n", heart);
-		//send(buffer);
-		unsigned char i = 0, notNow = 1;
+		unsigned char i = 0;
 		
-		values[0] = values[1];
+		switch (state) {
+        //------------------------------------------------------
+        // Waiting for a finger
+        //------------------------------------------------------
+        case SENSOR_IDLE:
+					if (heart < 100) {
+						if (lowCounter < 50)
+							lowCounter++;
+					}
+					else
+						lowCounter = 0; // Restart if the low sequence is interrupted.
+					if (lowCounter >= 40) { // Finger detected.
+						state 		 = SENSOR_WAIT_STABLE;
+						lowCounter = 0;
+					}
+					break;
+
+        //------------------------------------------------------
+        // Ignore the initialization period (<100)
+        //------------------------------------------------------
+        case SENSOR_WAIT_STABLE:
+					// Wait until the sensor starts producing real values.
+					if ((heart >= 100) && (heart < 3000)) {
+						state = SENSOR_MEASURING;
+						highCounter = 0;
+						sprintf(buffer, "{\"M\":{\"Smple\":%lu}}\n", heart);
+						send(buffer);
+					}
+					break;
+
+        //------------------------------------------------------
+        // Send pulse samples
+        //------------------------------------------------------
+        case SENSOR_MEASURING:
+					if (heart > 3000) {
+						if (highCounter < 50)
+							highCounter++;
+					}
+					else {
+						// Any normal sample means we're still measuring.
+						highCounter = 0;
+						sprintf(buffer, "{\"M\":{\"Sample\":%lu}}\n", heart);
+						send(buffer);
+					}
+
+					if (highCounter >= 40) {
+						state = SENSOR_IDLE; // Finger removed.
+						highCounter = 0;
+					}
+					break;
+
+        default:
+					state = SENSOR_IDLE;
+					lowCounter = 0;
+					highCounter = 0;
+					break;
+    }
+		/*values[0] = values[1];
 		values[1] = values[2];
 		values[2] = values[3];
 		values[3] = values[4];
@@ -56,9 +120,26 @@ void heartBeat() {
 		values[6] = values[7];
 		values[7] = values[8];
 		values[8] = values[9];
+		values[9] = heart;*/
+		
+		/*memmove(values, values + 1, sizeof(values) - sizeof(values[0]));
 		values[9] = heart;
 		
-		if ((values[0] < 100) &&
+		uint8_t lowCount = 0;
+		uint8_t highCount = 0;
+
+		for (i = 0; i < 10; i++) {
+			if (values[i] < 100)
+					lowCount++;
+			if (values[i] > 3000)
+					highCount++;
+		}
+		if (lowCount >= 10)
+			fingerDetected = 1;
+		else if (highCount == 10)
+			fingerDetected = 0;*/
+		
+		/*if ((values[0] < 100) &&
 				(values[1] < 100) &&
 				(values[2] < 100) &&
 				(values[3] < 100) &&
@@ -82,12 +163,14 @@ void heartBeat() {
 				(values[7] > 3000) &&
 				(values[8] > 3000) &&
 				(values[9] > 3000))
-			isPressed = 0;
+			isPressed = 0;*/
 		
-		if (isPressed && notNow) {
+		
+		
+		/*if (fingerDetected && (heart >= 100) && (heart <= 3000)) {
 			sprintf(buffer, "{\"M\":{\"Smple\":%ld}}\n", heart);
 			send(buffer);
-		}
+		}*/
 			/*int32_t diff = heart - values[8];
 			diff /= 10;
 			

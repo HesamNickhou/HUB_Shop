@@ -39,3 +39,6 @@
 .\project\bin\pn532_stm32f1.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 .\project\bin\pn532_stm32f1.o: ../Core/Inc/main.h
 .\project\bin\pn532_stm32f1.o: ..\Lib\define.h
+.\project\bin\pn532_stm32f1.o: ..\Lib\pn532_stm32f1.h
+.\project\bin\pn532_stm32f1.o: ..\Lib\pn532.h
+.\project\bin\pn532_stm32f1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

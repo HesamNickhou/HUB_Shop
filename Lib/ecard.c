@@ -1676,7 +1676,7 @@ unsigned char IncrementCreditToCard(unsigned long IDD, signed long int Payment,u
 				send("{\"C\":{\"Status\":7}}\n"); //Invalid Group flag data
 				return 1;
 			}*/
-//*****************	Get Hediye																		
+//*****************	Get Hediye ***********************************
 		if (ISO14443_LoginE2(4, 0x39)) {
 			if (ISO14443_SingleTagSelect(snr))
 				if (ISO14443_SingleTagSelect(snr))

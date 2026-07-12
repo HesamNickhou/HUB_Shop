@@ -17,7 +17,7 @@
 #define Appointment 	15
 #define gateRoadblock 16
 
-#define deviceType IO
+#define deviceType AmusementPark
 
 #if (deviceType == Sport)
 	#define BASE 10000
@@ -25,7 +25,8 @@
 	#define BASE 0
 #endif
 
-#define Release BASE + 312 //1404/11/12 //رفع ايراد فيدبک پوز سامان کيش
+//#define Release BASE + 312 //1404/11/12 //رفع ايراد فيدبک پوز سامان کيش
+#define Release BASE + 313 //1405/06/21 //رفع ايراد فيدبک پوز سامان کيش
 
 #define ONEREADCARD
 #define MaxReciveBuf

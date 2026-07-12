@@ -889,13 +889,31 @@ void relayState(char state, char num) {
 
 #if ((deviceType==BusEtebar) || (deviceType==AmusementPark))
 void RC522ExecTransactionCheck (void) {
-	//2A 01 00004f30 00000080 00000000 64 3B9AC9FF 00000fff 000A060d3937 d8
+	//byte array map to get data
+	//byte  0  		 = 2A starter byte
+	//bytes 2..5 	 = value to be increased in the card
+	//bytes 6..9 	 = gift value to be increased
+	//bytes 10..13 = Minimum credit which is valid
+	//byte  14 		 = should be 0x64 fixed!
+	//bytes 15..18 = Maximum credit which is valid
+	//bytes 19..22 = Device ID
+	//byte  23 		 = Year
+	//byte  24 		 = Month
+	//byte  25 		 = Day
+	//byte  26 		 = Hour
+	//byte  27 		 =	Min
+	//byte  28 		 = Sec
+	//bytes 29..32 = UC (organization code)
+	//bytes 33..36 = IDD ?
+	//bytes 37..40 = Request ID (to prevent register duplicated records on the host)
+	//byte  41 		 = CRC (XOR of all bytes from 0 to 40)
+	
 	unsigned long int IDD = 0;
 	crc = 0;
 	for (char cnt=0; cnt<41; cnt++)
 		crc ^= fromAndroid[cnt];
 	
-	if ((crc != fromAndroid[41]) ||  (fromAndroid[14] != 0x64)) { 
+	if ((crc != fromAndroid[41]) ||  (fromAndroid[14] != 0x64)) { //Invalid packet is received
 		send("{\"Receive\":{\"Status\":19}}\n");  
 		reciveDataFlag 			= 0;
 		flagRc522 		 			= 0;
@@ -920,12 +938,12 @@ void RC522ExecTransactionCheck (void) {
 		MINEtebar = (fromAndroid[10] << 24) + (fromAndroid[11] << 16) + (fromAndroid[12] << 8) + fromAndroid[13]; // 00 00 00 00
 		MAXEtebar = (fromAndroid[15] << 24) + (fromAndroid[16] << 16) + (fromAndroid[17] << 8) + fromAndroid[18]; // 00 89 54 40
 		deviceID  = (fromAndroid[19] << 24) + (fromAndroid[20] << 16) + (fromAndroid[21] << 8) + fromAndroid[22]; // 00 01 01 01
-		Year  = fromAndroid[23];
-		Month = fromAndroid[24];
-		Day   = fromAndroid[25];
-		Hour  = fromAndroid[26];
-		Min   = fromAndroid[27];
-		Sec   = fromAndroid[28];
+		Year  		= fromAndroid[23];
+		Month 		= fromAndroid[24];
+		Day   		= fromAndroid[25];
+		Hour  		= fromAndroid[26];
+		Min   		= fromAndroid[27];
+		Sec   		= fromAndroid[28];
 		configUc  = (fromAndroid[29] << 24) + (fromAndroid[30] << 16) + (fromAndroid[31] << 8) + fromAndroid[32];   // 00 01 01 01
 		IDD 		  = (fromAndroid[33] << 24) + (fromAndroid[34] << 16) + (fromAndroid[35] << 8) + fromAndroid[36];
 		requestID = (fromAndroid[37] << 24) + (fromAndroid[38] << 16) + (fromAndroid[39] << 8) + fromAndroid[40];
@@ -7832,9 +7850,9 @@ SoftUartInit(0,GPIOB,GPIO_PIN_3,GPIOC,GPIO_PIN_13);
 		//---------------------------------------
 		#ifdef ExecTransaction
 			if (flagRc522)
-				RC522ExecTransactionCheck();
+				RC522ExecTransactionCheck(); //to increase the card credit
 			if (decreaseFlag) {
-				RC522ExecDecreaseTransactionCheck();
+				RC522ExecDecreaseTransactionCheck(); //to decrease card credit
 				decFlag = 1;
 			}
 		#endif

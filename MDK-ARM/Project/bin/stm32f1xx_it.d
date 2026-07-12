@@ -40,7 +40,3 @@
 .\project\bin\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 .\project\bin\stm32f1xx_it.o: ..\Lib\define.h
 .\project\bin\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
-.\project\bin\stm32f1xx_it.o: ..\Lib\MAX30102.h
-.\project\bin\stm32f1xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\project\bin\stm32f1xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\project\bin\stm32f1xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

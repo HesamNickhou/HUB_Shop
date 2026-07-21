@@ -17,7 +17,7 @@
 #define Appointment 	15
 #define gateRoadblock 16
 
-#define deviceType AmusementPark
+#define deviceType Sport
 
 #if (deviceType == Sport)
 	#define BASE 10000
@@ -26,7 +26,7 @@
 #endif
 
 //#define Release BASE + 312 //1404/11/12 //رفع ايراد فيدبک پوز سامان کيش
-#define Release BASE + 313 //1405/06/21 //رفع ايراد فيدبک پوز سامان کيش
+#define Release BASE + 313 //1405/06/21 //پشتيباني از سنسور جديد نبض
 
 #define ONEREADCARD
 #define MaxReciveBuf

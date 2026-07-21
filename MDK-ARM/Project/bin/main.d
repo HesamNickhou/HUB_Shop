@@ -57,3 +57,4 @@
 .\project\bin\main.o: ..\Lib\ee.h
 .\project\bin\main.o: ..\Lib\flash.h
 .\project\bin\main.o: ../Core/Inc/heart_beat.h
+.\project\bin\main.o: ..\Lib\MAX30102.h

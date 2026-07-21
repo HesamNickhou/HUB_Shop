@@ -145,6 +145,7 @@ unsigned int
 void sendCRC(const char* buffer);
 unsigned char getCRC(const char* buffer);
 unsigned char useGift = 1, dontSend = 0;
+unsigned char sendPulseSensor = 0;
 
 #ifdef remote  
 static void MX_TIM2_Init(void);
@@ -7332,7 +7333,6 @@ SoftUartInit(0,GPIOB,GPIO_PIN_3,GPIOC,GPIO_PIN_13);
 	ADC1_Init();
 	#endif
 	uint32_t tAlive  = HAL_GetTick(); //HNA
-	uint32_t adcTick = HAL_GetTick();
   while (1) {
 		if ((HAL_GetTick() - tAlive) >= 3000) {
 			tAlive = HAL_GetTick();
@@ -7546,7 +7546,8 @@ SoftUartInit(0,GPIOB,GPIO_PIN_3,GPIOC,GPIO_PIN_13);
 		WDTR
 //---------------------------------------------------------MFRC522		
 		#ifdef Max30102
-		heartBeat();
+		if (sendPulseSensor)
+			heartBeat();
 		if (max30102Flag) {
 			//max30102_read_fifo(&max30102);
 			
@@ -7735,6 +7736,8 @@ SoftUartInit(0,GPIOB,GPIO_PIN_3,GPIOC,GPIO_PIN_13);
 			
 			#ifdef Max30102
 			case 'M': testConnectionMax30102();     rxAndroid = 1; break;
+			case 'z': sendPulseSensor = 1; 												 break; //Starts to send Pulse Sensor data
+			case 'Z': sendPulseSensor = 0; 												 break; //Stops to send Pulse Sensor data
 			#endif
 			//--------------------------------------------finger	
 			#ifdef finger
